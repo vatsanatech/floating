@@ -54,6 +54,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) => MaterialApp(
         theme: ThemeData.dark(),
         home: PiPSwitcher(
+          play: () => debugPrint('play'),
+          pause: () => debugPrint('pause'),
+          seekForward: () => debugPrint('seekForward'),
+          seekBackward: () => debugPrint('seekBackward'),
           childWhenDisabled: Scaffold(
             body: Center(child: Image.asset('assets/image.jpg')),
             floatingActionButtonLocation:
